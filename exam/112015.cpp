@@ -7,36 +7,29 @@ class Animal{
         string nickname;
     public:
         Animal(string a):nickname(a){}
-        void virtual Cry(){}
-
-};
-class Cat:public Animal{
-    public:
-        Cat(string a):Animal(a){}
-        void Cry(){
-            cout<<"å–µå–µå–µ"<<endl;
-        }
-
+        void virtual Cry();
 };
 class Dog:public Animal{
     public:
         Dog(string a):Animal(a){}
         void Cry(){
-            cout<<"æ±ªæ±ªæ±ª"<<endl;
+            cout<<"ÍôÍôÍô"<<endl;
         }
-
-
+};
+class Cat:public Animal{
+    public:
+        Cat(string a):Animal(a){}
+        void Cry(){
+            cout<<"ß÷ß÷ß÷"<<endl;
+        }
 };
 class Donkey:public Animal{
     public:
         Donkey(string a):Animal(a){}
         void Cry(){
-            cout<<"å—¯æ˜‚å—¯æ˜‚"<<endl;
+            cout<<"àÅºß"<<endl;
         }
-
-
 };
-
 class Person:public Animal{
     public:
         Person(string a):Animal(a){}
@@ -44,12 +37,11 @@ class Person:public Animal{
             p.Cry();
         }
 };
-
 int main()
 {
    #define N 4
-   Animal *p[N] = {new Dog("é˜¿é»„"), new Cat("å’ªå’ª"), new Donkey("é»”ä¹‹é©´"), new Cat("é›ªå›¢")};
-   Person baobao("å®å®");
+   Animal *p[N] = {new Dog("°¢»Æ"), new Cat("ßäßä"), new Donkey("Ç­Ö®Â¿"), new Cat("Ñ©ÍÅ")};
+   Person baobao("±¦±¦");
 
    for(int i = 0; i < N; i++)
       baobao.DoCry(*p[i]);
